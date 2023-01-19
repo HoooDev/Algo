@@ -16,8 +16,8 @@ def solution(survey, choices):
         elif mbti[mbti_lst[i]] < mbti[mbti_lst[i+1]]:
             answer += mbti_lst[i+1]
         elif mbti[mbti_lst[i]] == mbti[mbti_lst[i+1]]:
-            lst = [mbti_lst[i], mbti_lst[i+1]]
-            lst.sort()
-            answer += lst[0]
+            # lst = [mbti_lst[i], mbti_lst[i+1]]
+            # lst.sort()
+            answer += min(mbti_lst[i], mbti_lst[i+1])
             
     return answer
